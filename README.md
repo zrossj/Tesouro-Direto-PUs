@@ -10,7 +10,7 @@ Para executar o noteobook, é necessário:
 
 Tip: execute > pip install -r libs.txt
 
-3. Crie um arquivo .txt com a URL para conectar ao banco de dados usando a engine do SQLAlchemy.
+2. Crie um arquivo .txt com a URL para conectar ao banco de dados usando a engine do SQLAlchemy.
 
 Refs: 
 https://docs.sqlalchemy.org/en/20/core/engines.html
