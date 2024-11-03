@@ -11,11 +11,14 @@ Bibliotecas:
 - SQLAlchemy
 - psycopg2
 
+
+
+
 Instruções:
 
 Para executar o noteobook, é necessário:
 
-1. Instalar as bibliotecas utilizadas. O arquivo 'libs.txt' possui as principais libs usadas e necessarias ao projeto.
+1. Instalar as bibliotecas utilizadas e PostgreSQL. O arquivo 'libs.txt' possui as principais libs usadas e necessarias ao projeto.
 
 2. Crie um arquivo com o nome 'creds.txt' com a string URL para conectar ao banco de dados usando a engine do SQLAlchemy.
 
