@@ -1,6 +1,5 @@
 from sqlalchemy import text, create_engine
 import pandas as pd
-
 from app.properties import AppProperties
 
 
