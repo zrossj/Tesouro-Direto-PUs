@@ -6,7 +6,7 @@ Banco de Dados:
 
 Bibliotecas:
 - pandas
-- selenium
+- selenium (GECKODRIVER version: 0.35.0)
 - bs4
 - SQLAlchemy
 - psycopg2

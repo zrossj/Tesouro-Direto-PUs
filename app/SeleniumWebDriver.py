@@ -37,40 +37,4 @@ class SeleniumWebDriver:
 
 
         return self.tables
-
-    
-    def get_raw_tables(self, link):
-        
-        self.dfs = []
-        for soup_table in self.get_data_tables(link):
-            
-            row_set = []
-            for row in soup_table.find_all('tr'):
-                
-                col_set = []
-
-                for td in row.find_all('td'):
-                    col_set.append(td.text.strip())
-                
-                # regex to clean the data;
-                try:
-                    col_set[0] = re.search('[a-zA-Z+\t ]+(\w*)' , col_set[0]).group().strip().replace('\t', '')
-                    
-                except Exception as e:
-                    print(f"""Regex might failed while trying to matching pattern.
-                        \nString value: {col_set}
-                        \n{repr(e)}""")
-                    
-                
-                if len(col_set) >= 6: # slicing relevant and irregular data;
-                    col_set.pop(2)
-
-                row_set.append(col_set)
-            
-            
-            self.dfs.append(pd.DataFrame(row_set))
-        
-        log.info('get_raw_tables runned with sucess')
-
-        return self.dfs
             
