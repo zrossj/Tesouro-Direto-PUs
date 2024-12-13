@@ -24,9 +24,11 @@ def load_tables_pandas(html_tables: list) -> pd.DataFrame:
                 col_set[0] = re.search('[a-zA-Z+\t ]+(\w*)' , col_set[0]).group().strip().replace('\t', '')
                 
             except Exception as e:
-                print(f"""Regex might failed while trying to matching pattern.
-                    String value: {col_set}
-                    {repr(e)}\n""")
+                
+                if not len(col_set) == 0:                    
+                    print(f"""Regex might failed while trying to matching pattern.
+                        String value: {col_set}
+                        {repr(e)}\n""")
                 
             
             if len(col_set) >= 6: # slicing relevant and irregular data;

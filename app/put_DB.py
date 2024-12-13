@@ -1,11 +1,15 @@
 from sqlalchemy import text, create_engine
 import pandas as pd
 from app.properties import AppProperties
+import logging
 
 
+log = logging.getLogger(__name__)
+logging.basicConfig(filename = 'tesouroDireto.log', level=logging.INFO)
 
 
 def put_DB(df: pd.DataFrame):
+
 
     ppt = AppProperties()
 
@@ -65,4 +69,6 @@ def put_DB(df: pd.DataFrame):
         except:
             print('there is duplicated data')
 
-    return "DB script executed!"
+    log
+
+    return None
