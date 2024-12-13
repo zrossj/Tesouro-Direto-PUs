@@ -1,0 +1,6 @@
+FROM postgres:15.10
+
+ENV POSTGRES_PASSWORD=foo123qwe
+
+EXPOSE 5432
+
