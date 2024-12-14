@@ -19,7 +19,6 @@ from app.SeleniumWebDriver import SeleniumWebDriver
 import logging
 
 
-# In[2]:
 
 
 log = logging.getLogger(__name__)
@@ -28,7 +27,7 @@ logging.basicConfig(filename = 'tesouroDireto.log', level = logging.INFO)
 
 # <h3> Selenium
 
-# In[3]:
+
 
 
 url = 'https://www.tesourodireto.com.br/titulos/precos-e-taxas.htm'
@@ -37,15 +36,12 @@ driver = SeleniumWebDriver()
 
 # <h3> Scrapping HTML tables </h3>
 
-# In[4]:
 
 
 html_tables = driver.get_data_tables(url)
 
 
 # <h3> Change to pandas DataFrame </h3>
-
-# In[5]:
 
 
 # load html tables to pandas dataframe
@@ -55,8 +51,6 @@ df_raw = load_tables_pandas(html_tables)
 
 # ### Cleaning and Transforming
 
-# In[9]:
-
 
 # renaming of cols, dtypes, null values etc.
 
@@ -65,20 +59,7 @@ df = data_processing(df_raw)
 
 # <h3> Putting On DB Postgres </h3>
 
-# In[10]:
-
 
 put_DB(df)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
