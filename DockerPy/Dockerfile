@@ -40,6 +40,6 @@ RUN pip install -r requirements.txt
 
 
 CMD Xvfb :99 -screen 0 1280x1024x24 & \
-    python tesourodireto.py
+    python webhook.py
 
 

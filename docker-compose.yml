@@ -12,10 +12,15 @@ services:
             - "5444:5432"
 
         image: tesdir_postgres
+
+
     python:
         build: 
             context: ./DockerPy
             dockerfile: Dockerfile
+        
+        ports:
+            - "5000:5000"
 
         depends_on:
                 - postgres
